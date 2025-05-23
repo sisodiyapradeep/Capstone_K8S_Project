@@ -128,9 +128,7 @@ db-initializer   Complete   1/1           3m11s      47m
 ```bash
 kubectl apply -f events-api.yaml
 kubectl apply -f events-website.yaml
-kubectl apply -f events-website_v2.yaml # This will deploy v2 of the website
-kubectl apply -f events-website_v3.yaml
-```
+
 
 Wait for the pods to be in `Running` state:
 
@@ -141,14 +139,11 @@ kubectl get pods
 It should show the following:
 
 ```bash
-NAME                             READY   STATUS      RESTARTS   AGE
-database-server-mariadb-0        1/1     Running     0          55m
-db-initializer-x42kz             0/1     Completed   0          49m
-events-api-d5d78c67d-fhkkx       1/1     Running     0          38m
-events-web-5fd77bc757-ksgwk      1/1     Running     0          37m
-events-web-5fd77bc757-s85wx      1/1     Running     0          37m
-events-web-v2-765f966cd7-s42sb   1/1     Running     0          32m
-events-web-v3-765fc4974f-qvdmj   1/1     Running     0          32m
+NAME                            READY   STATUS      RESTARTS      AGE
+database-server-mariadb-0       1/1     Running     3 (42s ago)   8m17s
+db-initializer-x7zzc            0/1     Completed   0             15h
+events-api-b44db6b9-hm9m9       1/1     Running     0             15h
+events-web-59d6c957-4lt72       1/1     Running     0             19h
 ```
 
 Find the external IP of the website:
