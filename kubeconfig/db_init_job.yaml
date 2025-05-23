@@ -6,7 +6,7 @@ spec:
  template:
    spec:
      containers:
-     - image: coursedemos/events-job:v2.0
+     - image: 933199133172.dkr.ecr.us-east-1.amazonaws.com/events-job:v1.0
        name: db-init-job
        imagePullPolicy: "Always"
        env:
